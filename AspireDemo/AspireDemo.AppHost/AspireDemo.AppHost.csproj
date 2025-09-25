@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.3.1" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>5f7f1e28-909c-4812-b66e-df710d2df8e4</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspireDemo.ApiService\AspireDemo.ApiService.csproj" />
+    <ProjectReference Include="..\AspireDemo.Web\AspireDemo.Web.csproj" />
+    <ProjectReference Include="..\AspireDemo.Worker\AspireDemo.Worker.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.2" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="9.4.2" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.4.2" />
+    <PackageReference Include="KubernetesClient" Version="17.0.14" />
+  </ItemGroup>
+
+</Project>
